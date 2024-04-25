@@ -1,8 +1,8 @@
-import { API_PATH } from "../../../../../../constant/ApiPath";
+import { API_PATH } from "../../../../../../common/constant/ApiPath";
 import BlogBox from "./BlogBox";
 import { useState } from "react";
-import authAxios from "../../../../../../utill/ApiUtills";
-import { useFoldersStore } from "../../../../../../store/store";
+import authAxios from "../../../../../../common/utill/ApiUtills";
+import { useFoldersStore } from "../../../../../../common/store/store";
 import { Blog, Folder } from "../../../../../layout/type/SideBarType";
 
 type Props = {

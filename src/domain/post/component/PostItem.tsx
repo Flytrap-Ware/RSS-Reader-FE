@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Icon } from "../../common/component/Icon";
+import { Icon } from "../../../common/component/Icon";
 import { Post } from "../type/PostType";
-import { API_PATH } from "../../../constant/ApiPath";
-import authAxios from "../../../utill/ApiUtills";
+import { API_PATH } from "../../../common/constant/ApiPath";
+import authAxios from "../../../common/utill/ApiUtills";
 
 type Props = {
   key: number,

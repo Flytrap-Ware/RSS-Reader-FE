@@ -1,9 +1,9 @@
-import { Icon } from "../../../common/component/Icon";
-import { API_PATH } from "../../../../constant/ApiPath";
+import { Icon } from "../../../../common/component/Icon";
+import { API_PATH } from "../../../../common/constant/ApiPath";
 import { useNavigate } from "react-router-dom";
-import { PATH } from "../../../../constant/Path";
+import { PATH } from "../../../../common/constant/Path";
 import { StoredMemberInfo } from "../../../auth/type/AuthType";
-import authAxios from "../../../../utill/ApiUtills";
+import authAxios from "../../../../common/utill/ApiUtills";
 
 type Props = {
   title: string;

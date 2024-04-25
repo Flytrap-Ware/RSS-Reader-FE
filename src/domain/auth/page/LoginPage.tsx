@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Icon } from "../../common/component/Icon";
+import { Icon } from "../../../common/component/Icon";
 
 export default function LoginPage() {
 

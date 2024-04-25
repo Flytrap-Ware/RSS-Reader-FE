@@ -1,5 +1,5 @@
-import { PATH } from "../../../../constant/Path";
-import { useFoldersStore } from "../../../../store/store";
+import { PATH } from "../../../../common/constant/Path";
+import { useFoldersStore } from "../../../../common/store/store";
 import SideFolderTree from "./SideFolderTree";
 import { useNavigate } from "react-router-dom";
 

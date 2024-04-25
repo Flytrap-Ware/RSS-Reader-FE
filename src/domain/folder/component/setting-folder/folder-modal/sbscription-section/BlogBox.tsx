@@ -1,4 +1,4 @@
-import { Icon } from "../../../../../common/component/Icon";
+import { Icon } from "../../../../../../common/component/Icon";
 import { Blog } from "../../../../../layout/type/SideBarType";
 
 

@@ -1,9 +1,9 @@
 import FolderList from "./FolderList";
-import { API_PATH } from "../../../../constant/ApiPath";
+import { API_PATH } from "../../../../common/constant/ApiPath";
 import { useState } from "react";
 import FolderModal from "./folder-modal/FolderModal";
-import authAxios from "../../../../utill/ApiUtills";
-import { useFoldersStore } from "../../../../store/store";
+import authAxios from "../../../../common/utill/ApiUtills";
+import { useFoldersStore } from "../../../../common/store/store";
 import WebHookModal from "./webhook-modal/WebHookModal";
 import { Folder } from "../../../layout/type/SideBarType";
 

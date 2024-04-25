@@ -1,6 +1,6 @@
-import { API_PATH } from "../../../../constant/ApiPath";
-import { useFoldersStore } from "../../../../store/store";
-import authAxios from "../../../../utill/ApiUtills";
+import { API_PATH } from "../../../../common/constant/ApiPath";
+import { useFoldersStore } from "../../../../common/store/store";
+import authAxios from "../../../../common/utill/ApiUtills";
 import { Folder } from "../../../layout/type/SideBarType";
 import FolderBox from "./FolderBox";
 
