@@ -1,5 +1,5 @@
 import { Icon } from "../../../../../common/component/Icon";
-import { Blog } from "../../../../layout/sidebar/SideBarType";
+import { Blog } from "../../../../../layout/type/SideBarType";
 
 
 type Props = {

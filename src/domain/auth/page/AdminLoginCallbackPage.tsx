@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { PATH } from "../../../constants/Path";
-import { API_PATH } from "../../../constants/ApiPath";
+import { PATH } from "../../../constant/Path";
+import { API_PATH } from "../../../constant/ApiPath";
 import { StoredMemberInfo } from "../type/AuthType";
 
 export default function AdminLoginCallbackPage() {

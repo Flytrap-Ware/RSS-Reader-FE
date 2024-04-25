@@ -1,10 +1,10 @@
-import { Folder, InvitedMember } from "../../../../layout/sidebar/SideBarType";
 import MemberBox from "./MemberBox";
-import { API_PATH } from "../../../../../../constants/ApiPath";
+import { API_PATH } from "../../../../../../constant/ApiPath";
 import { useState } from "react";
 import MemberSearchList from "./MemberSearchList";
 import authAxios from "../../../../../../utill/ApiUtills";
 import { useFoldersStore } from "../../../../../../store/store";
+import { Folder, InvitedMember } from "../../../../../layout/type/SideBarType";
 
 type Props = {
   folder?: Folder;

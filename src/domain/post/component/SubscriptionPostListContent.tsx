@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Post } from "../type/PostType";
-import { API_PATH } from "../../../constants/ApiPath";
+import { API_PATH } from "../../../constant/ApiPath";
 import authAxios from "../../../utill/ApiUtills";
 import PostItemList from "./PostItemList";
 
@@ -10,7 +10,7 @@ type Props = {
 
 export default function SubscriptionPostListContent({subscriptionId}: Props) {
 
-  let timeoutId: number;
+  let timeoutId: NodeJS.Timeout;
 
   const [page, setPage] = useState<number>(0);
   const [posts, setPosts] = useState<Post[]>([]);

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { Folder } from "../component/layout/sidebar/SideBarType";
+import { Folder } from "../domain/layout/type/SideBarType";
 
 type FoldersStoreType = {
   privateFolders: Folder[];

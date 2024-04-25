@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Alert } from "../../../layout/sidebar/SideBarType";
 import WebHookBox from "./WebHookBox";
 import { useWebHookModalStore } from "../../../../../store/webHookModalStore";
+import { Alert } from "../../../../layout/type/SideBarType";
 
 export default function WebHookSection() {
   

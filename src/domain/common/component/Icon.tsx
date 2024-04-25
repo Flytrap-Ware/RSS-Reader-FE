@@ -1,11 +1,11 @@
-import GitHubMark from "../../../assets/github-mark-white.svg?react";
-import Folder from "../../../assets/folder.svg?react";
-import Stack from "../../../assets/stack.svg?react";
-import Bookmark from "../../../assets/bookmark.svg?react";
-import BookmarkFill from "../../../assets/bookmark-fill.svg?react";
-import View from "../../../assets/view.svg?react";
-import DeleteLeft from "../../../assets/delete-left.svg?react";
-import Alert from "../../../assets/alert.svg?react";
+import GitHubMark from "../../../asset/github-mark-white.svg?react";
+import Folder from "../../../asset/folder.svg?react";
+import Stack from "../../../asset/stack.svg?react";
+import Bookmark from "../../../asset/bookmark.svg?react";
+import BookmarkFill from "../../../asset/bookmark-fill.svg?react";
+import View from "../../../asset/view.svg?react";
+import DeleteLeft from "../../../asset/delete-left.svg?react";
+import Alert from "../../../asset/alert.svg?react";
 import React from "react";
 
 // eslint-disable-next-line react-refresh/only-export-components

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Icon } from "../../common/component/Icon";
 import { Post } from "../type/PostType";
-import { API_PATH } from "../../../constants/ApiPath";
+import { API_PATH } from "../../../constant/ApiPath";
 import authAxios from "../../../utill/ApiUtills";
 
 type Props = {

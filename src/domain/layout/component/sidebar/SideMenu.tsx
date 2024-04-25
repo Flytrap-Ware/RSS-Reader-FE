@@ -1,4 +1,4 @@
-import { PATH } from "../../../../constants/Path";
+import { PATH } from "../../../../constant/Path";
 import { useFoldersStore } from "../../../../store/store";
 import SideFolderTree from "./SideFolderTree";
 import { useNavigate } from "react-router-dom";

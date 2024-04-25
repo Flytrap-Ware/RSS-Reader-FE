@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { Folder } from "./SideBarType";
+import { Folder } from "../../type/SideBarType";
 import { useFoldersStore } from "../../../../store/store";
-import { PATH } from "../../../../constants/Path";
+import { PATH } from "../../../../constant/Path";
 import { Icon } from "../../../common/component/Icon";
 
 type Props = {

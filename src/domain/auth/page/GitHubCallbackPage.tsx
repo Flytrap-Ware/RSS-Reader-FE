@@ -2,9 +2,9 @@ import axios from "axios";
 import queryString from "query-string";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_PATH } from "../../../constants/ApiPath";
+import { API_PATH } from "../../../constant/ApiPath";
 import { StoredMemberInfo } from "../type/AuthType";
-import { PATH } from "../../../constants/Path";
+import { PATH } from "../../../constant/Path";
 
 export default function GitHubCallbackPage() {
 

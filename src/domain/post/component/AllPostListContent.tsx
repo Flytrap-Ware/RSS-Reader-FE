@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Post } from "../type/PostType";
 import authAxios from "../../../utill/ApiUtills";
-import { API_PATH } from "../../../constants/ApiPath";
+import { API_PATH } from "../../../constant/ApiPath";
 import PostItemList from "./PostItemList";
 
 export default function AllPostListContent() {
 
-  let timeoutId: number;
+  let timeoutId: NodeJS.Timeout;
 
   const [page, setPage] = useState<number>(0);
   const [posts, setPosts] = useState<Post[]>([]);

@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import "./PostContent.css";
-import { PATH } from './constants/Path';
+import { PATH } from './constant/Path';
 import AdminLoginCallbackPage from './domain/auth/page/AdminLoginCallbackPage';
 import MainPage from './domain/common/page/MainPage';
-import { Pages } from './constants/Pages';
+import { Pages } from './constant/Pages';
 import LoginPage from './domain/auth/page/LoginPage';
 import GitHubCallbackPage from './domain/auth/page/GitHubCallbackPage';
 

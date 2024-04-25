@@ -1,6 +1,6 @@
 import { useWebHookModalStore } from "../../../../../store/webHookModalStore";
 import { Icon } from "../../../../common/component/Icon";
-import { Alert } from "../../../layout/sidebar/SideBarType";
+import { Alert } from "../../../../layout/type/SideBarType";
 
 type Props = {
   alert: Alert;

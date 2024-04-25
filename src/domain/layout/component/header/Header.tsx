@@ -1,7 +1,7 @@
 import { Icon } from "../../../common/component/Icon";
-import { API_PATH } from "../../../../constants/ApiPath";
+import { API_PATH } from "../../../../constant/ApiPath";
 import { useNavigate } from "react-router-dom";
-import { PATH } from "../../../../constants/Path";
+import { PATH } from "../../../../constant/Path";
 import { StoredMemberInfo } from "../../../auth/type/AuthType";
 import authAxios from "../../../../utill/ApiUtills";
 

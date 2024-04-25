@@ -1,10 +1,10 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import SubscriptionPostListContent from "../../post/component/SubscriptionPostListContent";
-import { Pages } from "../../../constants/Pages";
+import { Pages } from "../../../constant/Pages";
 import FolderSettingContent from "../../folder/component/FolderSettingContent";
-import { API_PATH } from "../../../constants/ApiPath";
-import { PATH } from "../../../constants/Path";
+import { API_PATH } from "../../../constant/ApiPath";
+import { PATH } from "../../../constant/Path";
 import { StoredMemberInfo } from "../../auth/type/AuthType";
 import Header from "../../layout/component/header/Header";
 import authAxios from "../../../utill/ApiUtills";

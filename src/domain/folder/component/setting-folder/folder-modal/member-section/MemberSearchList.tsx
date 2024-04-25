@@ -1,4 +1,4 @@
-import { InvitedMember } from "../../../../layout/sidebar/SideBarType";
+import { InvitedMember } from "../../../../../layout/type/SideBarType";
 import MemberSearchBox from "./MemberSearchBox";
 
 type Props = {

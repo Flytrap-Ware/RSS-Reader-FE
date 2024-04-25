@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { Alert, Folder } from "../component/layout/sidebar/SideBarType";
 import authAxios from "../utill/ApiUtills";
-import { API_PATH } from "../constants/ApiPath";
+import { API_PATH } from "../constant/ApiPath";
+import { Alert, Folder } from "../domain/layout/type/SideBarType";
 
 type WebHookModalStoreType = {
   alerts: Alert[];
