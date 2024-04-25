@@ -12,11 +12,11 @@ type Props = {
 export default function SideFolderTree({ title, folders }: Props) {
   const { openFolder, closeFolder } = useFoldersStore();
   const navigate = useNavigate();
-  const goToSubscribePosts = (subscribeId: number, subscribeTitle: string) => {
-    navigate(PATH.SUBSCRIBE, {
+  const goToSusbscriptionPosts = (susbscriptionId: number, susbscriptionTitle: string) => {
+    navigate(PATH.SUBSCRIPTION, {
       state: {
-        subscribeId: subscribeId,
-        subscribeTitle: subscribeTitle,
+        susbscriptionId: susbscriptionId,
+        susbscriptionTitle: susbscriptionTitle,
       },
     });
   };
@@ -55,7 +55,7 @@ export default function SideFolderTree({ title, folders }: Props) {
               <ul className={`menu-dropdown ${folder.isOpen ? 'menu-dropdown-show' : ''}`}>
                 {folder.blogs.map((blog) => (
                   <li>
-                    <a onClick={() => goToSubscribePosts(blog.id, blog.title)}>
+                    <a onClick={() => goToSusbscriptionPosts(blog.id, blog.title)}>
                       {blog.title}
                     </a>
                   </li>

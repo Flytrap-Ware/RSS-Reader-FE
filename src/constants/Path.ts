@@ -2,7 +2,7 @@ export const PATH = {
   MAIN: "/",
   BOOKMARK: "/bookmark",
   FOLDER: "/folder",
-  SUBSCRIBE: "/subscribe",
+  SUBSCRIPTION: "/subscription",
   SETTING: {
     FOLDERS: "/setting/folders"
   },

@@ -4,7 +4,7 @@ import { Blog } from "../../../../layout/sidebar/SideBarType";
 
 type Props = {
   blog: Blog,
-  deleteHandler: (subscribeId: number) => void,
+  deleteHandler: (subscriptionId: number) => void,
 }
 
 export default function BlogBox({ blog, deleteHandler }: Props) {

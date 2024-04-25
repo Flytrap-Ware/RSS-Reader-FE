@@ -84,7 +84,7 @@ export default function PostItem({ key, post, setPostForModal }: Props) {
       </div>
       <div className="flex-1 px-4" onClick={openPostModal}>
         <p className="text-left text-sm text-gray-400">
-          {post.subscribeTitle} ({post.pubDate.substring(0, 10)})
+          {post.subscriptionTitle} ({post.pubDate.substring(0, 10)})
         </p>
         <h2 className="card-title">{post.title}</h2>
         <p className="text-left">{convertHtmlToText(post.description)}</p>

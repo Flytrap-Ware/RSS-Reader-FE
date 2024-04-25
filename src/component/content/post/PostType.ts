@@ -5,7 +5,7 @@ export type Post = {
     thumbnailUrl: string,
     description: string,
     pubDate: string,
-    subscribeTitle: string,
+    subscriptionTitle: string,
     open: boolean,
     bookmark: boolean,
 }

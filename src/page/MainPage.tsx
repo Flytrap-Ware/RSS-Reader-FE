@@ -3,7 +3,7 @@ import Layout from "../component/layout/Layout";
 import { useLocation, useNavigate } from "react-router-dom";
 import AllPostListContent from "../component/content/AllPostListContent";
 import BookmarkListContent from "../component/content/BookmarkListContent";
-import SubscribePostListContent from "../component/content/SubscribePostListContent";
+import SubscriptionPostListContent from "../component/content/SubscriptionPostListContent";
 import { Pages } from "../constants/Pages";
 import FolderSettingContent from "../component/content/FolderSettingContent";
 import { API_PATH } from "../constants/ApiPath";
@@ -72,12 +72,12 @@ export default function MainPage({ page }: Props) {
       );
       break;
     }
-    case Pages.SUBSCRIBE: {
+    case Pages.SUBSCRIPTION: {
       const data = location.state;
-      headerTitle = data.subscribeTitle;
-      key = data.subscribeId;
+      headerTitle = data.subscriptionTitle;
+      key = data.subscriptionId;
       content = (
-        <SubscribePostListContent key={key} subscribeId={data.subscribeId} />
+        <SubscriptionPostListContent key={key} subscriptionId={data.subscriptionId} />
       );
       break;
     }

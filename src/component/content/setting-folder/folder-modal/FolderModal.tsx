@@ -1,7 +1,7 @@
 import Modal from "react-modal";
-import SubscribeSection from "./sbscribe-section/SubscribeSection";
 import MemberSection from "./member-section/MemberSection";
 import { Folder } from "../../../layout/sidebar/SideBarType";
+import SubscriptionSection from "./sbscription-section/SubscriptionSection";
 
 type Props = {
   isFolderModalOpen: boolean;
@@ -36,7 +36,7 @@ export default function FolderModal({
           <h3 className="font-bold text-lg">폴더 명</h3>
 
           <div className="flex md:flex-row flex-col gap-2">
-            <SubscribeSection
+            <SubscriptionSection
               folder={folder}
               setFolder={setFolder}
             />

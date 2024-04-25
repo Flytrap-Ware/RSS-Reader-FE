@@ -10,7 +10,7 @@ type Props = {
   setFolder: React.Dispatch<React.SetStateAction<Folder | undefined>>;
 };
 
-export default function SubscribeSection({ folder, setFolder }: Props) {
+export default function SubscriptionSection({ folder, setFolder }: Props) {
   const { updateFolder } = useFoldersStore();
   const [newBlogUrl, setNewBlogUrl] = useState<string>("");
 
@@ -45,7 +45,7 @@ export default function SubscribeSection({ folder, setFolder }: Props) {
     }
 
     authAxios
-      .post(API_PATH.FOLDER.SUBSCRIBE.ADD(folder.id), {
+      .post(API_PATH.FOLDER.SUBSCRIPTION.ADD(folder.id), {
         blogUrl: newBlogUrl,
       })
       .then(function (response) {
@@ -55,8 +55,8 @@ export default function SubscribeSection({ folder, setFolder }: Props) {
 
         const responseData = response.data.data;
         const newBlog: Blog = {
-          id: responseData.subscribeId,
-          title: responseData.subscribeTitle,
+          id: responseData.subscriptionId,
+          title: responseData.subscriptionTitle,
           unreadCount: responseData.unreadCount,
         };
         folder.blogs.push(newBlog);
@@ -74,7 +74,7 @@ export default function SubscribeSection({ folder, setFolder }: Props) {
       });
   };
 
-  const deleteBlog = (folderSubscribeId: number) => {
+  const deleteBlog = (folderSubscriptionId: number) => {
     if (!confirm("해당 블로그를 삭제하시겠습니까?")) return;
 
     if (folder == undefined) {
@@ -83,14 +83,14 @@ export default function SubscribeSection({ folder, setFolder }: Props) {
     }
 
     authAxios
-      .delete(API_PATH.FOLDER.SUBSCRIBE.DELETE(folder.id, folderSubscribeId))
+      .delete(API_PATH.FOLDER.SUBSCRIPTION.DELETE(folder.id, folderSubscriptionId))
       .then(function (response) {
         if (response.status != 204) {
           return;
         }
 
         const newBlogs: Blog[] = folder.blogs.filter(
-          (blog) => blog.id !== folderSubscribeId
+          (blog) => blog.id !== folderSubscriptionId
         );
         const newFolder: Folder = {
           id: folder.id,

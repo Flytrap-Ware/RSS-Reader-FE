@@ -8,9 +8,9 @@ export const API_PATH = {
     ADD: (postId: number) => `/posts/${postId}/bookmarks`,
     DELETE: (postId: number) => `/posts/${postId}/bookmarks`,
   },
-  SUBSCRIBE: {
+  SUBSCRIPTION: {
     POST: {
-      GET_ALL: (subscribeId: number) => `/subscribes/${subscribeId}/posts`,
+      GET_ALL: (subscribptionId: number) => `/subscriptions/${subscribptionId}/posts`,
     }
   },
   FOLDER: {
@@ -21,9 +21,9 @@ export const API_PATH = {
       ADD: (folderId: number) => `/folders/${folderId}/members`,
       DELETE: (folderId: number, memberId: number) => `/folders/${folderId}/members/${memberId}`
     },
-    SUBSCRIBE: {
+    SUBSCRIPTION: {
       ADD: (folderId: number) => `/folders/${folderId}/rss`,
-      DELETE: (folderId: number, folderSubscribeId: number) => `/folders/${folderId}/rss/${folderSubscribeId}`
+      DELETE: (folderId: number, folderSubscriptionId: number) => `/folders/${folderId}/rss/${folderSubscriptionId}`
     },
     POST: {
       GET_ALL: (folderId: number) => `/folders/${folderId}/posts`,

@@ -5,10 +5,10 @@ import PostItemList from "./post/PostItemList";
 import authAxios from "../../utill/ApiUtills";
 
 type Props = {
-  subscribeId: number,
+  subscriptionId: number,
 }
 
-export default function SubscribePostListContent({subscribeId}: Props) {
+export default function SubscriptionPostListContent({subscriptionId}: Props) {
 
   let timeoutId: number;
 
@@ -22,7 +22,7 @@ export default function SubscribePostListContent({subscribeId}: Props) {
   // api call
   const getAllPosts = async (page: number) => {
     authAxios
-      .get(API_PATH.SUBSCRIBE.POST.GET_ALL(subscribeId), {
+      .get(API_PATH.SUBSCRIPTION.POST.GET_ALL(subscriptionId), {
         params: {
           page: page,
         },
