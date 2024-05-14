@@ -1,11 +1,11 @@
 import FolderList from "./FolderList";
-import { API_PATH } from "../../../../common/constant/ApiPath";
+import { API_PATH } from "@common/constant/ApiPath";
 import { useState } from "react";
 import FolderModal from "./folder-modal/FolderModal";
-import authAxios from "../../../../common/utill/ApiUtills";
-import { useFoldersStore } from "../../../../common/store/store";
+import authAxios from "@common/utill/ApiUtills";
+import { useFoldersStore } from "@common/store/FoldersStore";
 import WebHookModal from "./webhook-modal/WebHookModal";
-import { Folder } from "../../../layout/type/SideBarType";
+import { Folder } from "@domain/layout/type/SideBarType";
 
 export default function FolderSettingCard() {
   const { privateFolders, sharedFolders, addFolderToPrivateFolders } = useFoldersStore();

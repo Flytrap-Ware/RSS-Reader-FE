@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PostItem from "./PostItem";
 import PostModal from "./PostModal";
-import { Post } from "../../../domain/post/type/PostType"
+import { Post } from "@domain/post/type/PostType"
 
 type Props = {
     posts: Post[]

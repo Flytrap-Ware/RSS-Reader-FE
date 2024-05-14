@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Folder } from "../../type/SideBarType";
-import { useFoldersStore } from "../../../../common/store/store";
-import { PATH } from "../../../../common/constant/Path";
-import { Icon } from "../../../../common/component/Icon";
+import { useFoldersStore } from "@common/store/FoldersStore";
+import { PATH } from "@common/constant/Path";
+import { Icon } from "@common/component/Icon";
 
 type Props = {
   title?: string;

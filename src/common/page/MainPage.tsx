@@ -1,18 +1,18 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import SubscriptionPostListContent from "../../domain/post/component/SubscriptionPostListContent";
-import { Pages } from "../constant/Pages";
-import FolderSettingContent from "../../domain/folder/component/FolderSettingContent";
-import { API_PATH } from "../constant/ApiPath";
-import { PATH } from "../constant/Path";
-import { StoredMemberInfo } from "../../domain/auth/type/AuthType";
-import Header from "../../domain/layout/component/header/Header";
-import authAxios from "../utill/ApiUtills";
-import { useFoldersStore } from "../store/store";
-import AllPostListContent from "../../domain/post/component/AllPostListContent";
-import BookmarkListContent from "../../domain/post/component/BookmarkListContent";
-import FolderPostListContent from "../../domain/post/component/FolderPostListContent";
-import Layout from "../../domain/layout/component/Layout";
+import FolderSettingContent from "@domain/folder/component/FolderSettingContent";
+import { API_PATH } from "@common/constant/ApiPath";
+import { PATH } from "@common/constant/Path";
+import { StoredMemberInfo } from "@domain/auth/type/AuthType";
+import Header from "@domain/layout/component/header/Header";
+import authAxios from "@common/utill/ApiUtills";
+import { useFoldersStore } from "@common/store/FoldersStore";
+import AllPostListContent from "@domain/post/component/AllPostListContent";
+import BookmarkListContent from "@domain/post/component/BookmarkListContent";
+import FolderPostListContent from "@domain/post/component/FolderPostListContent";
+import Layout from "@domain/layout/component/Layout";
+import SubscriptionPostListContent from "@domain/post/component/SubscriptionPostListContent";
+import { Pages } from "@common/constant/Pages";
 
 type Props = {
   page: Pages;

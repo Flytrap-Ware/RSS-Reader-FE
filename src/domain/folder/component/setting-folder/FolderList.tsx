@@ -1,7 +1,7 @@
-import { API_PATH } from "../../../../common/constant/ApiPath";
-import { useFoldersStore } from "../../../../common/store/store";
-import authAxios from "../../../../common/utill/ApiUtills";
-import { Folder } from "../../../layout/type/SideBarType";
+import { API_PATH } from "@common/constant/ApiPath";
+import { useFoldersStore } from "@common/store/FoldersStore";
+import authAxios from "@common/utill/ApiUtills";
+import { Folder } from "@domain/layout/type/SideBarType";
 import FolderBox from "./FolderBox";
 
 type Props = {

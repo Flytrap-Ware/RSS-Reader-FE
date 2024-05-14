@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import WebHookSection from "./WebHookSection";
-import { useWebHookModalStore } from "../../../../../common/store/webHookModalStore";
+import { useWebHookModalStore } from "@common/store/WebHookModalStore";
 
 export default function WebHookModal() {
 

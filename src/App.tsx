@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import "./PostContent.css";
-import { PATH } from './common/constant/Path';
-import AdminLoginCallbackPage from './domain/auth/page/AdminLoginCallbackPage';
-import MainPage from './common/page/MainPage';
-import { Pages } from './common/constant/Pages';
-import LoginPage from './domain/auth/page/LoginPage';
-import GitHubCallbackPage from './domain/auth/page/GitHubCallbackPage';
+import { PATH } from '@common/constant/Path';
+import AdminLoginCallbackPage from '@domain/auth/page/AdminLoginCallbackPage';
+import MainPage from '@common/page/MainPage';
+import { Pages } from '@common/constant/Pages';
+import LoginPage from '@domain/auth/page/LoginPage';
+import GitHubCallbackPage from '@domain/auth/page/GitHubCallbackPage';
 
 function App() {
 

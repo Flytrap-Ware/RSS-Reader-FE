@@ -1,7 +1,7 @@
 import Modal from "react-modal";
 import MemberSection from "./member-section/MemberSection";
 import SubscriptionSection from "./sbscription-section/SubscriptionSection";
-import { Folder } from "../../../../layout/type/SideBarType";
+import { Folder } from "@domain/layout/type/SideBarType";
 
 type Props = {
   isFolderModalOpen: boolean;

@@ -1,4 +1,4 @@
-import { Post } from "../../../domain/post/type/PostType";
+import { Post } from "@domain/post/type/PostType";
 
 type Props = {
   post: Post;

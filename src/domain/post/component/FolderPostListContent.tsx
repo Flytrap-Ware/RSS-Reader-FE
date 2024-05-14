@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Post } from "../type/PostType";
-import authAxios from "../../../common/utill/ApiUtills";
-import { API_PATH } from "../../../common/constant/ApiPath";
+import authAxios from "@common/utill/ApiUtills";
+import { API_PATH } from "@common/constant/ApiPath";
 import PostItemList from "./PostItemList";
 
 type Props = {

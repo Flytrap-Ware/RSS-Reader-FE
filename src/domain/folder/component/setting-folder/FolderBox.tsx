@@ -1,6 +1,6 @@
-import { useWebHookModalStore } from "../../../../common/store/webHookModalStore";
-import { Icon } from "../../../../common/component/Icon";
-import { Folder } from "../../../layout/type/SideBarType";
+import { useWebHookModalStore } from "@common/store/WebHookModalStore";
+import { Icon } from "@common/component/Icon";
+import { Folder } from "@domain/layout/type/SideBarType";
 
 type Props = {
   folder: Folder;

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PATH } from "../constant/Path";
+import { PATH } from "@common/constant/Path";
 
 const authAxios = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
