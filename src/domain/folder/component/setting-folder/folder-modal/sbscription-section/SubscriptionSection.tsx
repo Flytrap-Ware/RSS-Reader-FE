@@ -55,8 +55,8 @@ export default function SubscriptionSection({ folder, setFolder }: Props) {
 
         const responseData = response.data.data;
         const newBlog: Blog = {
-          id: responseData.subscriptionId,
-          title: responseData.subscriptionTitle,
+          id: responseData.subscribeId,
+          title: responseData.subscribeTitle,
           unreadCount: responseData.unreadCount,
         };
         folder.blogs.push(newBlog);
