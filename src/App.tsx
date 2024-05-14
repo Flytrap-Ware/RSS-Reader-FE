@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./App.css";
 import "./PostContent.css";
-import LoginPage from './page/auth/LoginPage';
-import GitHubCallbackPage from './page/auth/GitHubCallbackPage';
-import { PATH } from './constants/Path';
-import AdminLoginCallbackPage from './page/auth/AdminLoginCallbackPage';
-import MainPage from './page/MainPage';
-import { Pages } from './constants/Pages';
+import { PATH } from '@common/constant/Path';
+import AdminLoginCallbackPage from '@domain/auth/page/AdminLoginCallbackPage';
+import MainPage from '@common/page/MainPage';
+import { Pages } from '@common/constant/Pages';
+import LoginPage from '@domain/auth/page/LoginPage';
+import GitHubCallbackPage from '@domain/auth/page/GitHubCallbackPage';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
           <Route path={PATH.MAIN} element={<MainPage page={Pages.ALL_POST} />} />
           <Route path={PATH.BOOKMARK} element={<MainPage page={Pages.BOOKMARK} />} />
           <Route path={PATH.FOLDER} element={<MainPage page={Pages.FOLDER} />} />
-          <Route path={PATH.SUBSCRIBE} element={<MainPage page={Pages.SUBSCRIBE} />} />
+          <Route path={PATH.SUBSCRIPTION} element={<MainPage page={Pages.SUBSCRIPTION} />} />
           <Route path={PATH.SETTING.FOLDERS} element={<MainPage page={Pages.SET_FOLDERS} />} />
           <Route path={PATH.AUTH.LOGIN} element={<LoginPage />} />
           <Route path={PATH.AUTH.CALLBACK} element={<GitHubCallbackPage />} />
