@@ -54,7 +54,7 @@ export default function Header({ title, memberInfo, setMemberInfo }: Props) {
             {memberInfo != null ? (
               <div className="w-10 rounded-full">
                 <img
-                  alt="Tailwind CSS Navbar component"
+                  alt="User Profile Image"
                   src={memberInfo && memberInfo.profile}
                 />
               </div>
