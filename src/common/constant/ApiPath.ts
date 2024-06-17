@@ -22,8 +22,8 @@ export const API_PATH = {
       DELETE: (folderId: number, memberId: number) => `/folders/${folderId}/members/${memberId}`
     },
     SUBSCRIPTION: {
-      ADD: (folderId: number) => `/folders/${folderId}/rss`,
-      DELETE: (folderId: number, folderSubscriptionId: number) => `/folders/${folderId}/rss/${folderSubscriptionId}`
+      ADD: (folderId: number) => `/folders/${folderId}/subscriptions`,
+      DELETE: (folderId: number, folderSubscriptionId: number) => `/folders/${folderId}/subscriptions/${folderSubscriptionId}`
     },
     POST: {
       GET_ALL: (folderId: number) => `/folders/${folderId}/posts`,
