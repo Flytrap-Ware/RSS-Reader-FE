@@ -1,4 +1,3 @@
-import SideLogo from "./SideLogo";
 import SideMenu from "./SideMenu";
 
 export default function SideBar() {
@@ -9,8 +8,6 @@ export default function SideBar() {
         aria-label="close sidebar"
         className="drawer-overlay"
       ></label>
-
-      <SideLogo />
 
       <SideMenu />
     </>

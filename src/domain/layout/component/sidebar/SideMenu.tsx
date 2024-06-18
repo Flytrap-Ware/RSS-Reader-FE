@@ -2,6 +2,7 @@ import { PATH } from "@common/constant/Path";
 import { useFoldersStore } from "@common/store/FoldersStore";
 import SideFolderTree from "./SideFolderTree";
 import { useNavigate } from "react-router-dom";
+import SideLogo from "./SideLogo";
 
 export default function SideMenu() {
   const { privateFolders, sharedFolders } = useFoldersStore();
@@ -12,6 +13,7 @@ export default function SideMenu() {
 
   return (
     <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content gap-2">
+      <SideLogo />
       <li>
         <a className="btn btn-success text-lg" onClick={() => goToPage(PATH.MAIN)}>전체 보기</a>
       </li>
