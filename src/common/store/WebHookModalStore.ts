@@ -99,12 +99,11 @@ export const useWebHookModalStore = create<WebHookModalStoreType>(
         }));
       });
 
-      (document.getElementById(get().modalId) as HTMLDialogElement).showModal()
+      (document.getElementById(get().modalId) as HTMLDialogElement).showModal();
     },
     closeWebHookModal: () => {
       set(() => ({
         alerts: [],
-        isWebHookModalOpen: false,
         folderForModal: undefined,
       }));
     },

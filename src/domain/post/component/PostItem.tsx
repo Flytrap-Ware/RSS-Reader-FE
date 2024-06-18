@@ -3,18 +3,18 @@ import { Icon } from "@common/component/Icon";
 import { Post } from "../type/PostType";
 import { API_PATH } from "@common/constant/ApiPath";
 import authAxios from "@common/utill/ApiUtills";
+import { usePostModalStore } from "@common/store/PostModalStore";
 
 type Props = {
   key: number,
   post: Post,
-  setPostForModal: (post?: Post) => void,
 };
 
 const DESCRIPTION_MAX_LENGTH = 250;
 
-export default function PostItem({ key, post, setPostForModal }: Props) {
-  const [isOpen, setIsOpen] = useState<boolean>(post.open);
+export default function PostItem({ key, post }: Props) {
   const [isBookmark, setIsBookmark] = useState<boolean>(post.bookmark);
+  const { openPostModal } = usePostModalStore();
 
   function convertHtmlToText(htmlString: string): string {
     const parser = new DOMParser();
@@ -29,12 +29,12 @@ export default function PostItem({ key, post, setPostForModal }: Props) {
     }
   }
 
-  const bookmarkHandler = (postId: number) => {
+  const bookmarkHandler = (post: Post) => {
     if (isBookmark) {
         authAxios
-          .delete(API_PATH.BOOKMARK.DELETE(postId))
+          .delete(API_PATH.BOOKMARK.DELETE(post.id))
           .then(function (response) {
-            if (response.status == 200) {
+            if (response.status == 204) {
               setIsBookmark(false);
             } else {
               throw new Error("Request failed: " + response.status);
@@ -42,7 +42,7 @@ export default function PostItem({ key, post, setPostForModal }: Props) {
           });
     } else {
         authAxios
-          .post(API_PATH.BOOKMARK.ADD(postId))
+          .post(API_PATH.BOOKMARK.ADD(post.id))
           .then(function (response) {
             if (response.status == 201) {
               setIsBookmark(true);
@@ -53,36 +53,15 @@ export default function PostItem({ key, post, setPostForModal }: Props) {
     }
   };
 
-  const openPostModal = () => {
-    authAxios
-      .get(API_PATH.POST.GET(post.id))
-      .then(function (response) {
-        if (response.status == 200) {
-          const responsePost: Post = response.data.data;
-          setIsOpen(true);
-          setPostForModal(responsePost);
-        } else {
-          setPostForModal(undefined);
-          throw new Error("Request failed: " + response.status);
-        }
-      })
-      .catch(() => {
-        setPostForModal(undefined);
-      });
-  };
-
   return (
     <div key={key} className="card lg:card-side shadow-xl border p-4">
       <div className="flex-none flex items-center justify-center">
-        {/* <div className="skeleton h-32 w-52">
-          <img src={post.thumbnailUrl} className="object-cover w-full h-full rounded-sm" />
-        </div> */}
         <img
           src={post.thumbnailUrl}
           className="object-cover h-32 w-52 rounded-xl"
         />
       </div>
-      <div className="flex-1 px-4" onClick={openPostModal}>
+      <div className="flex-1 px-4" onClick={() => openPostModal(post)}>
         <p className="text-left text-sm text-gray-400">
           {post.subscriptionTitle} ({post.pubDate.substring(0, 10)})
         </p>
@@ -90,8 +69,8 @@ export default function PostItem({ key, post, setPostForModal }: Props) {
         <p className="text-left">{convertHtmlToText(post.description)}</p>
       </div>
       <div className="flex flex-none space-x-2">
-        <div>{isOpen ? <Icon name="view" /> : undefined}</div>
-        <div onClick={() => bookmarkHandler(post.id)}>
+        <div>{post.open ? <Icon name="view" /> : undefined}</div>
+        <div onClick={() => bookmarkHandler(post)}>
           {isBookmark ? <Icon name="bookmarkFill" /> : <Icon name="bookmark" />}
         </div>
       </div>
