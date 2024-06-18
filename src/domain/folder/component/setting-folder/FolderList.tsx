@@ -8,14 +8,12 @@ type Props = {
   title: string,
   folders: Folder[],
   setFolderForModal: React.Dispatch<React.SetStateAction<Folder | undefined>>, 
-  setIsFolderModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
 };
 
 export default function FolderList({ 
   title, 
   folders, 
   setFolderForModal, 
-  setIsFolderModalOpen,
 }: Props) {
   const { deleteFolder } = useFoldersStore();
 
@@ -43,7 +41,6 @@ export default function FolderList({
               key={index}
               folder={folder}
               setFolderForModal={setFolderForModal}
-              setIsFolderModalOpen={setIsFolderModalOpen}
               deleteHandler={deleteFolderHandler}
             />
           ))}
