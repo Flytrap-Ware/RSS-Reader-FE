@@ -4,8 +4,9 @@ import { API_PATH } from "@common/constant/ApiPath";
 import { Alert, Folder } from "@domain/layout/type/SideBarType";
 
 type WebHookModalStoreType = {
+  modalId: string;
   alerts: Alert[];
-  isWebHookModalOpen: boolean;
+  // isWebHookModalOpen: boolean;
   folderForModal?: Folder;
   setAlerts: (alerts: Alert[]) => void;
   addAlert: (webHookUrl: string) => boolean;
@@ -16,8 +17,9 @@ type WebHookModalStoreType = {
 
 export const useWebHookModalStore = create<WebHookModalStoreType>(
   (set, get) => ({
+    modalId: 'webhook_modal',
     alerts: [],
-    isWebHookModalOpen: false,
+    // isWebHookModalOpen: false,
     folderForModal: undefined,
     setAlerts: (alerts: Alert[]) => {
       set({ alerts });
@@ -83,13 +85,13 @@ export const useWebHookModalStore = create<WebHookModalStoreType>(
         });
     },
     openWebHookModal: (folder: Folder) => {
-      const currentState = get().isWebHookModalOpen;
-      if (currentState) {
-        return;
-      }
+      // const currentState = get().isWebHookModalOpen;
+      // if (currentState) {
+      //   return;
+      // }
 
       set(() => ({
-        isWebHookModalOpen: true,
+        // isWebHookModalOpen: true,
         folderForModal: folder,
       }));
 
@@ -103,6 +105,8 @@ export const useWebHookModalStore = create<WebHookModalStoreType>(
           alerts: alerts,
         }));
       });
+
+      (document.getElementById(get().modalId) as HTMLDialogElement).showModal()
     },
     closeWebHookModal: () => {
       set(() => ({
