@@ -37,7 +37,7 @@ export const useWebHookModalStore = create<WebHookModalStoreType>(
         webhookUrl: webHookUrl,
       })
       .then(function (response) {
-        if (response.status != 200) {
+        if (response.status != 201) {
           alert("올바른 상태코드가 아닙니다. 상태코드를 확인하세요. 상태코드 = " + response.status);
           return false;
         }
@@ -65,7 +65,7 @@ export const useWebHookModalStore = create<WebHookModalStoreType>(
       authAxios
         .delete(API_PATH.ALERT.DELETE(folderId, alertId))
         .then(function(response) {
-          if (response.status != 200) {
+          if (response.status != 204) {
             alert("올바른 상태코드가 아닙니다. 상태코드를 확인하세요. 상태코드 = " + response.status);
             return;
           }
