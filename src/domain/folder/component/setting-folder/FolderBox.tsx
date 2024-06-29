@@ -5,21 +5,19 @@ import { Folder } from "@domain/layout/type/SideBarType";
 type Props = {
   folder: Folder;
   setFolderForModal: React.Dispatch<React.SetStateAction<Folder | undefined>>;
-  setIsFolderModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   deleteHandler: (folderId: number) => void;
 };
 
 export default function FolderBox({
   folder,
   setFolderForModal,
-  setIsFolderModalOpen,
   deleteHandler
 }: Props) {
   const { openWebHookModal } = useWebHookModalStore();
 
   const openFolderModal = () => {
     setFolderForModal(folder);
-    setIsFolderModalOpen(true);
+    (document.getElementById('folder_modal') as HTMLDialogElement).showModal()
   };
 
   return (

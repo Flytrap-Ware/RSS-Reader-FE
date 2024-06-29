@@ -1,12 +1,12 @@
 export const API_PATH = {
   POST: {
-    GET: (postId: number) => `/posts/${postId}`,
+    GET: (postId: string) => `/posts/${postId}`,
     GET_ALL: "/posts",
   },
   BOOKMARK: {
     GET_ALL: "/bookmarks",
-    ADD: (postId: number) => `/posts/${postId}/bookmarks`,
-    DELETE: (postId: number) => `/posts/${postId}/bookmarks`,
+    ADD: (postId: string) => `/posts/${postId}/bookmarks`,
+    DELETE: (postId: string) => `/posts/${postId}/bookmarks`,
   },
   SUBSCRIPTION: {
     POST: {

@@ -8,14 +8,12 @@ type Props = {
   title: string,
   folders: Folder[],
   setFolderForModal: React.Dispatch<React.SetStateAction<Folder | undefined>>, 
-  setIsFolderModalOpen: React.Dispatch<React.SetStateAction<boolean>>,
 };
 
 export default function FolderList({ 
   title, 
   folders, 
   setFolderForModal, 
-  setIsFolderModalOpen,
 }: Props) {
   const { deleteFolder } = useFoldersStore();
 
@@ -37,13 +35,11 @@ export default function FolderList({
     <>
       <h1 className="text-left text-lg font-bold mt-4 px-2">{title}</h1>
       <div className="border-2 border-success bg-green-50 rounded-box gap-2">
-        {folders &&
-          folders.map((folder: Folder, index: number) => (
+        {folders && folders.map((folder: Folder, index: number) => (
             <FolderBox
               key={index}
               folder={folder}
               setFolderForModal={setFolderForModal}
-              setIsFolderModalOpen={setIsFolderModalOpen}
               deleteHandler={deleteFolderHandler}
             />
           ))}

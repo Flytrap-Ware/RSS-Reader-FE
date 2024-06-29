@@ -153,7 +153,7 @@ export default function MemberSection({ folder, setFolder }: Props) {
         <div className="flex gap-1 relative">
           <input
             type="text"
-            placeholder="추가할 폴더 이름을 입력해주세요."
+            placeholder="추가할 멤버의 이름을 입력해주세요."
             className="input input-bordered input-primary w-full"
             value={newMemberName}
             onChange={(e) => searchMembers(e.target.value)}

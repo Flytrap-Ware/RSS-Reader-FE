@@ -71,6 +71,7 @@ export default function SubscriptionSection({ folder, setFolder }: Props) {
         };
 
         updateFolder(newFolder);
+        setNewBlogUrl("")
       });
   };
 
@@ -115,6 +116,7 @@ export default function SubscriptionSection({ folder, setFolder }: Props) {
           placeholder="추가할 폴더 이름을 입력해주세요."
           className="input input-bordered input-primary w-full"
           onChange={(e) => setNewBlogUrl(e.target.value)}
+          value={newBlogUrl}
         />
         <button className="btn btn-square btn-secondary" onClick={addBlog}>
           +

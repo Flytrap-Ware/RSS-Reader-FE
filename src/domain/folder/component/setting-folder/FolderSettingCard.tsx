@@ -1,16 +1,15 @@
 import FolderList from "./FolderList";
 import { API_PATH } from "@common/constant/ApiPath";
 import { useState } from "react";
-import FolderModal from "./folder-modal/FolderModal";
 import authAxios from "@common/utill/ApiUtills";
 import { useFoldersStore } from "@common/store/FoldersStore";
 import WebHookModal from "./webhook-modal/WebHookModal";
 import { Folder } from "@domain/layout/type/SideBarType";
+import FolderModal from "./folder-modal/FolberModal";
 
 export default function FolderSettingCard() {
   const { privateFolders, sharedFolders, addFolderToPrivateFolders } = useFoldersStore();
   const [newFolderName, setNewFolderName] = useState<string>("");
-  const [isFolderModalOpen, setIsFolderModalOpen] = useState<boolean>(false);
   const [folderForModal, setFolderForModal] = useState<Folder | undefined>();
 
   const isFolderNameEmpty = (): boolean => {
@@ -84,18 +83,14 @@ export default function FolderSettingCard() {
             title={"개인 폴더"}
             folders={privateFolders}
             setFolderForModal={setFolderForModal}
-            setIsFolderModalOpen={setIsFolderModalOpen}
           />
           <FolderList
             title={"공유 폴더"}
             folders={sharedFolders}
             setFolderForModal={setFolderForModal}
-            setIsFolderModalOpen={setIsFolderModalOpen}
           />
         </div>
         <FolderModal
-          isFolderModalOpen={isFolderModalOpen}
-          setIsFolderModalOpen={setIsFolderModalOpen}
           folder={folderForModal}
           setFolder={setFolderForModal}
         />
